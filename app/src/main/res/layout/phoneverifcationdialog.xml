@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#F4F4F4">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".mainPage">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/car"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:maxHeight="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="RideSwift"-->
+    <!--        android:textColor="#FFFFFF"-->
+    <!--        android:textSize="35dp"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:fontFamily="@font/newfont"-->
+    <!--        android:textStyle="bold"/>-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/title"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxWidth="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Phone Number"
+        android:textColor="@color/black"
+        android:layout_marginLeft="30dp"
+        android:textSize="15dp"
+        android:fontFamily="@font/newfont"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:drawableStart="@drawable/phoneicon"
+        />
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter the OTP received on your Phone Number"
+        android:textColor="@color/black"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:fontFamily="@font/newfont"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginTop="30dp"/>
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_weight="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/anotherboxstyle"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:text="+91"
+            android:textSize="15dp"
+            android:textColor="@color/grey"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:editable="false"
+            />
+
+
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_weight="2"
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/newboxstyle"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:text=""
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+
+            />
+
+
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="visible"
+        android:id="@+id/getOTP"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:elevation="50dp"
+        android:shadowColor="@color/white"
+        android:shadowRadius="20"
+        android:text="Request OTP"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/buttonbackground"
+        android:textColor="@color/black"
+        android:layout_marginBottom="30dp">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <com.chaos.view.PinView
+        android:visibility="gone"
+        android:id="@+id/pinview"
+        app:itemCount="6"
+        app:itemWidth="30dp"
+        app:itemHeight="30dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:itemBackground="@color/white"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:cursorVisible="true"
+        app:hideLineWhenFilled="false"
+        app:itemRadius="7dp"
+        style="@style/PinWidget.PinView"
+        ></com.chaos.view.PinView>
+    <TextView
+        android:id="@+id/text2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Not received the OTP yet?"
+        android:textColor="@color/black"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:fontFamily="@font/newfont"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resend OTP"
+        android:textColor="@color/yellow"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:fontFamily="@font/newfont"
+        android:textStyle="bold"
+        android:layout_marginTop="0dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="gone"
+        android:id="@+id/verifyOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:elevation="50dp"
+        android:layout_gravity="center"
+        android:shadowColor="@color/white"
+        android:shadowRadius="20"
+        android:text="Verify OTP"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:background="@drawable/buttonbackground"
+        android:textColor="@color/black"/>
+</LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnBookK"
+            android:background="@null"
+            android:src="@drawable/close" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainpagebackground"
+    android:orientation="vertical"
+    tools:context=".mainPage">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/car"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:maxHeight="160dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="RideSwift"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="35dp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:fontFamily="@font/newfont"-->
+<!--        android:textStyle="bold"/>-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/title"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxWidth="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Phone Number"
+        android:textColor="@color/white"
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/newfont"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:drawableStart="@drawable/phoneicon"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_weight="0.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/anotherboxstyle"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:text="+91"
+            android:textSize="20dp"
+            android:textColor="@color/grey"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:editable="false"
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_weight="2"
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/newboxstyle"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="or Sign Up using"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:fontFamily="@font/newfont"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="30dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:cardBackgroundColor="@color/black">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/google"
+                android:layout_weight="1"
+                android:padding="20dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/microsoft"
+                android:layout_weight="1"
+                android:padding="20dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:elevation="50dp"
+        android:shadowColor="@color/white"
+        android:shadowRadius="20"
+        android:text="Submit"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="@drawable/buttonbackground"
+        android:textColor="@color/black">
+    </androidx.appcompat.widget.AppCompatButton>
+</LinearLayout>

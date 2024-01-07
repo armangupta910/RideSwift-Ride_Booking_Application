@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "462279081743",
+    "project_id": "rideswift-8dc70",
+    "storage_bucket": "rideswift-8dc70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462279081743:android:76790e98cf7f633f63087a",
+        "android_client_info": {
+          "package_name": "com.example.rideswift"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462279081743-nnb7c4embbhq9auebebhq8pvar3457i3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rideswift",
+            "certificate_hash": "888cedee5b430e9954fd0021b4424b6818abc4e9"
+          }
+        },
+        {
+          "client_id": "462279081743-s2d62od4qr8n74npuq6kq28qma0ughdd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAROHASiFVcrdDoCtjUTbQn92qRBMNlPYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462279081743-s2d62od4qr8n74npuq6kq28qma0ughdd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
