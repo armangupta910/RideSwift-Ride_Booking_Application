@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/mainpagebackground"
+    tools:context=".viewSeprately">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/goback"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/goBack"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Select your Marketplace"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:hint="Enter the Product"
+        android:paddingLeft="10dp"/>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:editable="false"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/white"
+            android:layout_weight="0.2"
+            android:hint="Marketplace"
+            android:paddingLeft="10dp"
+            android:drawableEnd="@drawable/arrowdown"
+            android:id="@+id/dropdown"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/go"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/buttonbackground"
+            android:text="Go"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/cardforrecycler"
+        android:id="@+id/recycler"/>
+
+
+
+</LinearLayout>

@@ -5,6 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class splashscreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,8 +27,21 @@ class splashscreen : AppCompatActivity() {
             intent.putExtra("Username",username)
             intent.putExtra("ProfileURL",imageURL)
 
-            startActivity(intent)
-            finish()
+            var ref = 0
+            val db = Firebase.firestore
+            db.collection("MasterData").get().addOnSuccessListener {
+                for (i in it){
+                    if(i.id == FirebaseAuth.getInstance().currentUser!!.uid.toString()){
+                        ref = 1
+                        startActivity(intent)
+                        finish()
+                    }
+                }
+                if(ref == 0){
+                    startActivity(Intent(this,addTrip::class.java))
+                    finish()
+                }
+            }
         }
     }
 }

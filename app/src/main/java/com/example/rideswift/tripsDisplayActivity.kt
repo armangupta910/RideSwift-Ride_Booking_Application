@@ -14,6 +14,7 @@ class tripsDisplayActivity : AppCompatActivity() {
         setContentView(R.layout.activity_trips_display)
 
         val data:MutableList<HashMap<String,String>> = mutableListOf()
+
         val db=Firebase.firestore
 
         db.collection("MasterData").get().addOnSuccessListener {

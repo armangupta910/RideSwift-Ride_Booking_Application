@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="top"
+    android:gravity="center"
     android:background="@drawable/mainpagebackground"
     tools:context=".addTrip">
 
     <TextView
+
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pick Up Details"
+        android:text="General Information"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:layout_marginLeft="20dp"
@@ -26,115 +27,49 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter your Pick up Location"
+        android:text="Enter your Full Name"
         android:textColor="@color/white"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="10dp"
         android:textSize="15dp"/>
 
     <EditText
-        android:id="@+id/pick"
-        android:drawableStart="@drawable/location"
+        android:id="@+id/name"
+        android:drawableStart="@drawable/person"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottomsheetsearchbackground"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Source"
+        android:hint="Full Name"
         android:textSize="18dp"
         android:layout_marginBottom="20dp"
         android:padding="10dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter your Drop Off Location"
+        android:text="Enter your Username"
         android:textColor="@color/white"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="10dp"
         android:textSize="15dp"/>
     <EditText
-        android:id="@+id/drop"
-        android:drawableStart="@drawable/location"
+        android:id="@+id/username"
+        android:drawableStart="@drawable/person"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottomsheetsearchbackground"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:hint="Destination"
+        android:hint="Username"
         android:textSize="18dp"
         android:padding="10dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Select a Date and Time"
-        android:textColor="@color/white"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="20dp"
-        android:textSize="15dp"/>
 
-    <TextView
-        android:drawableStart="@drawable/datetime"
-        android:layout_marginTop="0dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bottomsheetsearchbackground"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:hint="Pick a Date"
-        android:textSize="18dp"
-        android:id="@+id/datetimepicker"
-        android:padding="10dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter your Vehicle type"
-        android:textColor="@color/white"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="20dp"
-        android:textSize="15dp"/>
-
-    <EditText
-        android:id="@+id/vehicle"
-        android:drawableStart="@drawable/vehicle"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bottomsheetsearchbackground"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:hint="Vehicle"
-        android:textSize="18dp"
-        android:padding="10dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter some extra Information"
-        android:textColor="@color/white"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="20dp"
-        android:textSize="15dp"/>
-
-    <EditText
-        android:id="@+id/extra"
-        android:drawableStart="@drawable/about"
-        android:layout_marginTop="0dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bottomsheetsearchbackground"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:hint="Extra Information"
-        android:textSize="18dp"
-        android:padding="10dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:visibility="visible"
-        android:id="@+id/addTrip"
+        android:id="@+id/proceed"
         android:layout_width="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
@@ -145,7 +80,7 @@
         android:elevation="50dp"
         android:shadowColor="@color/white"
         android:shadowRadius="20"
-        android:text="Add Trip"
+        android:text="Proceed"
         android:textSize="15dp"
         android:textStyle="bold"
         android:paddingLeft="5dp"

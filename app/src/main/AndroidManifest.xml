@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +15,19 @@
         android:theme="@style/Theme.RideSwift"
         tools:targetApi="31">
         <activity
-            android:name=".splashscreen"
+            android:name=".pinneditems"
+            android:exported="false" />
+        <activity
+            android:name=".viewSeprately"
+            android:exported="false" />
+        <activity
+            android:name=".newMainPage"
+            android:exported="false" />
+        <activity
+            android:name=".scrapper"
+            android:exported="false" />
+        <activity
+            android:name=".tripsDisplayActivity"
             android:exported="false" />
         <activity
             android:name=".addTrip"
@@ -34,7 +48,7 @@
             android:name=".homePage"
             android:exported="false" />
         <activity
-            android:name=".tripsDisplayActivity"
+            android:name=".splashscreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

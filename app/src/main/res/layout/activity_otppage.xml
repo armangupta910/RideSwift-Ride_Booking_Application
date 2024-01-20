@@ -65,8 +65,7 @@
         android:cursorVisible="true"
         app:hideLineWhenFilled="false"
         app:itemRadius="10dp"
-        style="@style/PinWidget.PinView"
-        ></com.chaos.view.PinView>
+        style="@style/PinWidget.PinView" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

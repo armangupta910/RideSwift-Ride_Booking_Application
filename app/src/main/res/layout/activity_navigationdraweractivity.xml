@@ -12,6 +12,7 @@
     android:paddingTop="20dp">
 
     <ImageView
+        android:id="@+id/profile"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/person"
@@ -22,33 +23,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="My Profile"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_marginLeft="15dp"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:src="@drawable/arrow"
-            android:textColor="@color/white"
-            android:layout_marginLeft="15dp"/>
-
     </LinearLayout>
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_gravity="left"
-        android:src="@drawable/title"
-        android:scaleType="centerCrop"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TrackNShop"
+        android:textSize="25dp"
         android:textColor="@color/white"
-        android:layout_marginLeft="0dp"/>
+        android:textStyle="bold"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

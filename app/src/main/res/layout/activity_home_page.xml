@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/grey"
+    android:background="@color/black"
     android:id="@+id/drawer"
     tools:context=".homePage">
 
@@ -20,22 +20,26 @@
         android:layout_marginRight="15dp"
         android:layout_width="match_parent"
         android:layout_height="41dp"
-        android:background="@drawable/topsearchbackground">
+        android:background="@color/white">
+
 
         <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
+
         <ImageView
+
             android:id="@+id/opendrawer"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_centerInParent="true"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="15dp"
             android:src="@drawable/yellowmenu"/>
 
             <EditText
+                android:id="@+id/searchBox"
                 android:textSize="15dp"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="0dp"
@@ -46,31 +50,40 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="0dp"
                 android:paddingBottom="0dp"
-
-                android:hint="Your Location"
+                android:drawableEnd="@drawable/cross"
+                android:hint="Search in the whole Marketplace"
                 android:textColorHint="@color/black"
                 android:layout_marginRight="1dp"/>
+
+            <ImageView
+
+                android:id="@+id/searchButton"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/baseline_manage_search_24"/>
 
     </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/data"
-            android:gravity="center"
-            android:layout_gravity="center"/>
-        <ImageView
-            android:src="@color/white"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/profileimage"
-            android:layout_gravity="center"/>
 
-    <include layout="@layout/activity_bottom_sheet" android:id="@+id/bottom_sheet" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/cardforrecycler"
+            android:id="@+id/recycler"/>
+
+<!--    <include layout="@layout/activity_bottom_sheet" android:id="@+id/bottom_sheet" />-->
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
     <com.google.android.material.navigation.NavigationView
         app:itemIconTint="@color/yellow"

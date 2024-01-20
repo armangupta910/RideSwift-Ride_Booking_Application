@@ -54,8 +54,21 @@ class OTPPage : AppCompatActivity() {
                     val editor=token.edit()
                     editor.putString("data",phone)
                     editor.commit()
-                    startActivity(intent)
-                    finish()
+                    var ref = 0
+                    val db = Firebase.firestore
+                    db.collection("MasterData").get().addOnSuccessListener {
+                        for (i in it){
+                            if(i.id == FirebaseAuth.getInstance().currentUser!!.uid.toString()){
+                                ref = 1
+                                startActivity(intent)
+                                finish()
+                            }
+                        }
+                        if(ref == 0){
+                            startActivity(Intent(this,addTrip::class.java))
+                            finish()
+                        }
+                    }
                 } else {
                     // Sign in failed, display a message and update the UI
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {

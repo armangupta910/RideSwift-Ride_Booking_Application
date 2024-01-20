@@ -25,6 +25,8 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.util.concurrent.TimeUnit
 
 class mainPage : AppCompatActivity() {
@@ -155,9 +157,23 @@ class mainPage : AppCompatActivity() {
                 val editor=token.edit()
                 editor.putString("data",email)
                 editor.commit()
+                var ref = 0
+                val db = Firebase.firestore
+                db.collection("MasterData").get().addOnSuccessListener {
+                    for (i in it){
+                        if(i.id == FirebaseAuth.getInstance().currentUser!!.uid.toString()){
+                            ref = 1
+                            startActivity(intent)
+                            finish()
+                        }
+                    }
+                    if(ref == 0){
+                        startActivity(Intent(this,addTrip::class.java))
+                        finish()
+                    }
+                }
 
-                startActivity(intent)
-                finish()
+
             }
         }
     }

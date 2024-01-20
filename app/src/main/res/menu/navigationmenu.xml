@@ -4,26 +4,26 @@
     tools:ignore="HardcodedText">
 
     <item
-        android:id="@+id/nav_account"
-        android:icon="@drawable/yourrides"
-        android:title="Your Rides" />
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:title="Home" />
 
     <item
-        android:id="@+id/nav_settings"
+        android:id="@+id/pinned"
         android:icon="@drawable/money"
-        android:title="RideSwift Money" />
+        android:title="Pinned Products" />
 
     <item
-        android:id="@+id/support"
-        android:icon="@drawable/support"
-        android:title="Support" />
+        android:id="@+id/marketplaces"
+        android:icon="@drawable/baseline_shopping_cart_24"
+        android:title="Marketplaces" />
     <item
-        android:id="@+id/nav_logout1"
-        android:icon="@drawable/about"
-        android:title="About" />
+        android:id="@+id/help"
+        android:icon="@drawable/help"
+        android:title="Help" />
     <item
         android:id="@+id/signout"
         android:icon="@drawable/signout"
-        android:title="Sign Out" />
+        android:title="Logout" />
 
 </menu>
