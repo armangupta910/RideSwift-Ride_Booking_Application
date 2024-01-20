@@ -24,7 +24,7 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:src="@drawable/car"
+        android:src="@drawable/shopping"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
@@ -41,15 +41,6 @@
     <!--        android:layout_gravity="center"-->
     <!--        android:fontFamily="@font/newfont"-->
     <!--        android:textStyle="bold"/>-->
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/title"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:maxWidth="100dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
     <TextView
         android:visibility="gone"
         android:id="@+id/textView"

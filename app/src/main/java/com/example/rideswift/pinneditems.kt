@@ -1,7 +1,9 @@
 package com.example.rideswift
 
+import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -18,8 +20,10 @@ class pinneditems : AppCompatActivity() {
 
         val db=Firebase.firestore
         db.collection("MasterData").document(FirebaseAuth.getInstance().currentUser!!.uid.toString()).get().addOnSuccessListener {
+
             val demodata:HashMap<String,HashMap<String,String>>
             demodata = it.data!!.get("Pinned Products") as HashMap<String, HashMap<String, String>>
+            Log.d(TAG,"Demo Data: ${demodata}")
             for(i in demodata){
                 data.add(i.value)
             }
